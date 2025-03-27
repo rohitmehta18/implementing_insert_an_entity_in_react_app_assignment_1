@@ -1,9 +1,9 @@
 // src/components/Home.jsx
-
 import React from "react";
+import { Link } from "react-router-dom";
 import BookCard from "./components/BookCard";
 import books from "./booksData";
-import "./Home.css"; // Import the CSS for styling
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -14,6 +14,9 @@ const Home = () => {
           <BookCard key={book.id} book={book} />
         ))}
       </div>
+      <Link to="/add-book">
+        <button className="add-book-button">Add Book</button>
+      </Link>
     </div>
   );
 };
